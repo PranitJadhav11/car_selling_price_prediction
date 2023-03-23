@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+</head>
+<body bgcolor="#7FFFD4">
+       <center>
+            <h2>Car Selling Price Prediction</h2>
+            <hr>
+    
+            <form action="/predict" method="POST">
+                <label>Car Name : </label>&emsp;&emsp;<input type="text" name="car_Name" placeholder="Enter Car Brand Name"/><br><br>
+                <label>Purchased Year :  </label><input type="text" name="year" placeholder = "Enter Car Purchased Year"/><br><br>
+                <label>Present Price : </label><input type="text" name="present_Price" placeholder="Enter Price in Lakhs" /><br><br>
+                <label>Kms Driven  :  </label><input type="text" name="kms_Driven"  placeholder="Enter Car Driven Kms"/><br><br>
+                <label>Fuel Type : </label>
+                        <select name="Fuel_Type" >
+                            <option value="">Select Car Fuel Type</option>
+                            <option value=0>Diesel</option>
+                            <option value=1>Petrol</option>
+                            <option value=2>CNG</option>
+                        </select>
+                <br><br>
+                <label>Seller Type : </label>
+                        <select name="Seller_Type">
+                            <option value="">Select Car Seller Type</option>
+                            <option value=0>Individual</option>
+                            <option value=1>Dealer</option>
+                        </select>
+                <br><br>
+                <label>Transmission :  </label>
+                        <select name="Transmission">
+                            <option value=>Select Car Transmission Type</option>
+                            <option value=0>Manual</option>
+                            <option value=1>Automatic</option>
+                        </select>
+                <br><br>
+                <label>Owner : </label>&emsp;
+                        <select name="Owner">
+                            <option value=>Select Car Owner</option>
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                        </select>
+                <br><br><br>
+                <button type="submit"><b>Predict<b></button>
+                <br>
+                <center>
+                    <Hr>
+                    <h2> The Predicted Value of your car is = ₹ {{value}}0/-</h2>
+                    <hr>
+                </center>
+            </form>
+    </center>
+</body>
+</html>

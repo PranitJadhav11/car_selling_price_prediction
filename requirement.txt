@@ -1,0 +1,8 @@
+Flask==2.2.2
+Jinja2==3.1.2
+numpy==1.23.5
+pip==23.0.1
+scikit-learn==1.2.1
+scipy==1.10.0
+Werkzeug==2.2.3
+
