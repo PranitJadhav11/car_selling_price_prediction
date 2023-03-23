@@ -1,5 +1,6 @@
 from flask import Flask ,render_template,request
 from app.utils import Prediction
+import CONFIG
 
 app = Flask(__name__)
 
@@ -19,4 +20,4 @@ def predict_price():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1",port=5000,debug=True)
+    app.run(host=CONFIG.HOST,port=CONFIG.PORT,debug=CONFIG.DEBUG)

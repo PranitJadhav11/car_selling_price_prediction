@@ -2,6 +2,7 @@ import numpy as np
 import pickle
 import json
 import os
+import CONFIG
 
 class Prediction():
     def __init__(self):
@@ -9,13 +10,13 @@ class Prediction():
     
     def load_raw(self):
 
-        with open("app\Car_Pred_Model.pkl","rb") as model_file:
+        with open(CONFIG.MODEL_PATH,"rb") as model_file:
             self.model = pickle.load(model_file)
 
-        with open("app\Column.json","r") as col_file:
+        with open(CONFIG.COLUMNS_PATH,"r") as col_file:
             self.col = json.load(col_file)
 
-        with open("app\encoded_data.json") as enc_file:
+        with open(CONFIG.ENCODE_PATH,"r") as enc_file:
             self.encoded_data = json.load(enc_file)
         return "Load Raw Success"
         
